@@ -41,6 +41,7 @@ DEFINES += QT_DEPRECATED_WARNINGS
 TRANSLATIONS += ../translations/peony-qt/peony-qt_zh_CN.ts \
                 ../translations/peony-qt/peony-qt_tr.ts \
                 ../translations/peony-qt/peony-qt_cs.ts
+system("lrelease-qt5 ../translations/peony-qt/*.ts")
 
 SOURCES += \
     peony-application.cpp \

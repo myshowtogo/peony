@@ -37,7 +37,8 @@ HEADERS += \
 
 DESTDIR = ../../testdir
 
-TRANSLATIONS += translations/peony-qt-mate-terminal-extension_zh_CN.ts
+TRANSLATIONS += ../translations/peony-qt-mate-terminal-extension_zh_CN.ts
+system("lrelease-qt5 ../translations/*.ts")
 
 unix {
     target.path = $$[QT_INSTALL_LIBS]/peony-extensions

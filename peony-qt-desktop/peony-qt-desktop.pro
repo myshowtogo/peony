@@ -31,6 +31,7 @@ LIBS += -L$$PWD/../libpeony-qt/ -lpeony -lX11
 TRANSLATIONS += ../translations/peony-qt-desktop/peony-qt-desktop_zh_CN.ts \
                 ../translations/peony-qt-desktop/peony-qt-desktop_tr.ts \
                 ../translations/peony-qt-desktop/peony-qt-desktop_cs.ts
+system("lrelease-qt5 ../translations/peony-qt-desktop/*.ts")
 
 SOURCES += \
     main.cpp \

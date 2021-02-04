@@ -39,6 +39,7 @@ include(libpeony-qt.pri)
 TRANSLATIONS += ../translations/libpeony-qt/libpeony-qt_zh_CN.ts \
                 ../translations/libpeony-qt/libpeony-qt_tr.ts \
                 ../translations/libpeony-qt/libpeony-qt_cs.ts
+system("lrelease-qt5 ../translations/libpeony-qt/*.ts")
 
 DESTDIR += $$PWD
 
