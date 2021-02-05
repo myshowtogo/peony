@@ -93,19 +93,13 @@ rm -rf $RPM_BUILD_ROOT
 make INSTALL_ROOT=%{buildroot} install
 
 #peony-common
-mkdir -p %{buildroot}/usr/share/dbus-1/interfaces
-mkdir -p %{buildroot}/usr/share/dbus-1/services
-mkdir -p %{buildroot}/usr/share/peony-qt
-mkdir -p %{buildroot}/usr/share/peony-qt-desktop
-
-cp -r %{_builddir}/%{name}-%{version}/peony-qt-desktop/freedesktop-dbus-interfaces.xml %{buildroot}/usr/share/dbus-1/interfaces
-cp -r %{_builddir}/%{name}-%{version}/peony-qt-desktop/org.ukui.freedesktop.FileManager1.service %{buildroot}/usr/share/dbus-1/services
-cp -r %{_builddir}/%{name}-%{version}/translations/peony-qt/* %{buildroot}/usr/share/peony-qt
-cp -r %{_builddir}/%{name}-%{version}/translations/peony-qt-desktop/* %{buildroot}/usr/share/peony-qt-desktop
+install -D %{_builddir}/%{name}-%{version}/peony-qt-desktop/freedesktop-dbus-interfaces.xml %{buildroot}/usr/share/dbus-1/interfaces
+install -D %{_builddir}/%{name}-%{version}/peony-qt-desktop/org.ukui.freedesktop.FileManager1.service %{buildroot}/usr/share/dbus-1/services
+install -D %{_builddir}/%{name}-%{version}/translations/peony-qt/* %{buildroot}/usr/share/peony-qt
+install -D %{_builddir}/%{name}-%{version}/translations/peony-qt-desktop/* %{buildroot}/usr/share/peony-qt-desktop
 
 #libpeony3
-mkdir -p %{buildroot}/usr/share/libpeony-qt
-cp -r %{_builddir}/%{name}-%{version}/translations/libpeony-qt/* %{buildroot}/usr/share/libpeony-qt
+install -D %{_builddir}/%{name}-%{version}/translations/libpeony-qt/* %{buildroot}/usr/share/libpeony-qt
 
 %clean
 rm -rf $RPM_BUILD_ROOT
