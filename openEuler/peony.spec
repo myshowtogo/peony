@@ -22,6 +22,7 @@ BuildRequires: poppler-devel
 BuildRequires: poppler-qt5-devel
 BuildRequires: kf5-kwindowsystem-devel
 BuildRequires: libcanberra-devel
+BuildRequires: qt5-linguist
 
 Requires: peony-common
 Requires: libpeony3
